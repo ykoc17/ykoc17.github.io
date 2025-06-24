@@ -40,6 +40,21 @@ body {
   color: #00a8ff;
 }
 
+.sidebar a.active {
+  background-color: #0077cc; /* Highlight color */
+  color: white; /* Text color for the active link */
+  border-radius: 2px; /* Optional: Rounded corners */
+  padding: 2px 7px; /* Optional: Add padding for better appearance */
+}
+
+.sidebar-bottom-text {
+  position: absolute;
+  bottom: 20px; /* Add spacing from the bottom */
+  left: 20px; /* Align with sidebar padding */
+  font-size: 10px;
+  color: #ccc; /* Use a lighter color for subtlety */
+}
+
 /* Main text */
 .text {
   max-width: 700px;
@@ -51,6 +66,7 @@ body {
   font-size: 35px;
   color: #0a3d62;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .text p {
@@ -63,28 +79,28 @@ body {
 .welcome {
   flex: 1;
   padding: 30px;
-  background-color: #ffffff;
+  background: linear-gradient(to bottom, #f0f4f8, #ffffff); /* Subtle gradient */
   overflow: hidden;
 }
 
 .about {
   flex: 1;
   padding: 30px;
-  background-color: #ffffff;
+  background: linear-gradient(to bottom, #f0f4f8, #ffffff); /* Subtle gradient */
   overflow: hidden;
 }
 
 .contact {
   flex: 1;
   padding: 30px;
-  background-color: #ffffff;
+  background: linear-gradient(to bottom, #f0f4f8, #ffffff); /* Subtle gradient */
   overflow: hidden;
 }
 
 .work {
   flex: 1;
   padding: 30px;
-  background-color: #ffffff;
+  background: linear-gradient(to bottom, #f0f4f8, #ffffff); /* Subtle gradient */
   overflow-y: auto;
 }
 
@@ -146,6 +162,13 @@ margin-top: 10px;
     border-radius: 5px;
 }
 
+.cv-button:hover {
+  background-color: #0077cc; /* Change background color on hover */
+  color: #ffffff; /* Ensure text remains readable */
+  transform: scale(1.05); /* Slightly enlarge the button */
+  transition: all 0.3s ease; /* Smooth transition effect */
+}
+
 /* Socials */
 .socials {
   display: flex;
@@ -181,6 +204,8 @@ margin-top: 10px;
     width: 100%; /* Make sidebar full-width */
     padding: 20px; /* Adjust padding for smaller screens */
     text-align: center; /* Center sidebar content */
+    position: relative; /* Change to relative for mobile */
+    height: auto; /* Adjust height for content */
   }
 
   .sidebar ul {
@@ -215,4 +240,10 @@ margin-top: 10px;
     width: auto; /* Adjust button width */
     margin: 15px auto; /* Center button */
   }
+
+  .sidebar-bottom-text {
+    position: static; /* Remove absolute positioning */
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Add spacing from the content above */
+    font-size: 12px; /* Adjust font size for smaller screens */
 }
