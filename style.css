@@ -84,7 +84,7 @@ nav a:hover {
 }
 
 .profile-pic {
-    width: 50px; /* Adjust the width */
+    width: 100px; /* Adjust the width */
     height: auto; /* Maintain aspect ratio */
   }
 
