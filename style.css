@@ -84,28 +84,28 @@ body {
 .welcome {
   flex: 1;
   padding: 30px;
-  background: linear-gradient(to bottom, #f0f4f8, #ffffff); /* Subtle gradient */
+  background: white;
   overflow: hidden;
 }
 
 .about {
   flex: 1;
   padding: 30px;
-  background: linear-gradient(to bottom, #f0f4f8, #ffffff); /* Subtle gradient */
+  background: white;
   overflow: hidden;
 }
 
 .contact {
   flex: 1;
   padding: 30px;
-  background: linear-gradient(to bottom, #f0f4f8, #ffffff); /* Subtle gradient */
+  background: white;
   overflow: hidden;
 }
 
 .work {
   flex: 1;
   padding: 30px;
-  background: linear-gradient(to bottom, #f0f4f8, #ffffff); /* Subtle gradient */
+  background: white;
   overflow-y: auto;
 }
 
@@ -191,6 +191,14 @@ margin-top: 10px;
   transform: scale(1.1);
 }
 
+.project-title {
+  font-size: 24px;
+  color: #0a3d62;
+  margin-top: 20px;
+  font-weight: 550;
+  text-align: center;
+}
+
 .project-description {
   margin-top: 10px;
   color: #555;
@@ -199,6 +207,16 @@ margin-top: 10px;
 
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
+
+  main {
+    margin-top: 70px; /* Add space below the toggle button */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-direction: column; /* Stack content vertically */
+    padding: 20px; /* Add padding for better spacing */
+  }
+
   body {
     flex-direction: column; /* Stack content vertically */
     height: auto; /* Allow content to adjust height */
@@ -263,13 +281,18 @@ margin-top: 10px;
   }
 
   .profile-pic {
-    width: 300px; /* Reduce image size for mobile */
+    width: 275px; /* Reduce image size for mobile */
     height: auto; /* Maintain aspect ratio */
   }
 
   .socials {
     gap: 15px; /* Reduce spacing between icons */
     justify-content: center; /* Center icons */
+  }
+
+  .socials img {
+    width: 40px;
+    height: 40px;
   }
 
   .cv-button {
@@ -282,6 +305,9 @@ margin-top: 10px;
     text-align: center; /* Center the text */
     margin-top: 20px; /* Add spacing from the content above */
     font-size: 12px; /* Adjust font size for smaller screens */
+  }
+  .text h1 {
+    font-size: 30px; /* Adjust font size for smaller screens */
+  }
 }
 
-}
