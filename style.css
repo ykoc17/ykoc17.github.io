@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
@@ -39,53 +40,101 @@ body {
   color: #00a8ff;
 }
 
-/* Main content */
-.welcome {
-  flex: 1;
-  padding: 80px;
-  background-color: #ffffff;
-  overflow-y: auto;
-}
-
-.intro {
+/* Main text */
+.text {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
 }
 
-.intro h1 {
-  font-size: 42px;
+.text h1 {
+  font-size: 35px;
   color: #0a3d62;
   margin-bottom: 20px;
 }
 
-.intro p {
-  font-size: 18px;
+.text p {
+  font-size: 15px;
   margin-bottom: 30px;
   color: #444;
 }
 
-.profile-pic {
-  width: 300px;
+/* Different page styles */
+.welcome {
+  flex: 1;
+  padding: 30px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.about {
+  flex: 1;
+  padding: 30px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.contact {
+  flex: 1;
+  padding: 30px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.work {
+  flex: 1;
+  padding: 30px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+/* Pictures */
+.profile-pic { /* Profile picture in the welcome page*/
+  width: 275px;
   margin-bottom: 30px;
 }
 
 .profile-pic-container {
-    text-align: center;
-    margin-bottom: 20px; /* Add spacing below the figure */
+  text-align: center; /* Profile picture container in the welcome page*/
+  margin-bottom: 20px;
 }
 
 .profile-pic-container img {
 display: block;
-margin: 0 auto; /* Center the image */
+margin: 0 auto;
 }
 
 .profile-pic-container figcaption {
 font-size: 16px;
 color: #666;
-margin-top: 10px; /* Add spacing above the caption */
+margin-top: 10px;
 }
 
+.project-pic {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.project-pic-container { /* Project picture container in the work page */
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.project-pic-container img {
+  display: block;
+  margin: 0 auto;
+  }
+
+.project-pic-container figcaption {
+  font-size: 10px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* CV */
 .cv-button {
     display: inline-block;
     margin: 0 auto 20px auto; /* Adjust spacing specifically for this button */
@@ -97,6 +146,7 @@ margin-top: 10px; /* Add spacing above the caption */
     border-radius: 5px;
 }
 
+/* Socials */
 .socials {
   display: flex;
   justify-content: center;
@@ -111,4 +161,58 @@ margin-top: 10px; /* Add spacing above the caption */
 
 .socials img:hover {
   transform: scale(1.1);
+}
+
+.project-description {
+  margin-top: 10px;
+  color: #555;
+  text-align: justify;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Allow content to adjust height */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+  }
+
+  .sidebar {
+    width: 100%; /* Make sidebar full-width */
+    padding: 20px; /* Adjust padding for smaller screens */
+    text-align: center; /* Center sidebar content */
+  }
+
+  .sidebar ul {
+    padding: 0;
+  }
+
+  .sidebar li {
+    margin-bottom: 10px; /* Reduce spacing between items */
+  }
+
+  .sidebar a {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .text {
+    max-width: 90%; /* Reduce text width */
+    margin: 0 auto; /* Center content */
+    text-align: center; /* Center-align text */
+  }
+
+  .profile-pic {
+    width: 300px; /* Reduce image size for mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .socials {
+    gap: 15px; /* Reduce spacing between icons */
+    justify-content: center; /* Center icons */
+  }
+
+  .cv-button {
+    width: auto; /* Adjust button width */
+    margin: 15px auto; /* Center button */
+  }
 }
