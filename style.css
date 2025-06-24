@@ -1,0 +1,18 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+  }
+  header {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0077cc;
+  }
+  
