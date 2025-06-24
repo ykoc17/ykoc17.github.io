@@ -83,6 +83,11 @@ nav a:hover {
   border: 4px solid #0a3d62;
 }
 
+.profile-pic {
+    width: 150px; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
 /* Socials */
 .socials {
   margin-top: 30px;
