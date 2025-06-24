@@ -1,7 +1,5 @@
-/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -10,36 +8,29 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #f7f9fc;
-  color: #333;
   display: flex;
-  min-height: 100vh;
   flex-direction: row;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #333;
 }
 
 a {
   text-decoration: none;
-  color: #0077cc;
+  color: #ffffff;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Sidebar Navigation */
 nav {
   background-color: #0a3d62;
-  padding: 40px 20px;
   width: 220px;
-  min-height: 100vh;
-  position: fixed;
-  right: 0;
-  top: 0;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 
 nav h2 {
@@ -50,24 +41,23 @@ nav h2 {
 
 nav a {
   color: #f0f0f0;
-  padding: 10px 0;
-  display: block;
+  padding: 12px 0;
   font-size: 16px;
-  transition: all 0.2s ease-in-out;
+  width: 100%;
+  transition: 0.2s;
 }
 
 nav a:hover {
   color: #00a8ff;
 }
 
-/* Main Content */
 .main-content {
-  flex: 1;
+  margin-left: 220px;
   padding: 60px 40px;
-  margin-right: 220px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  background-color: #fff;
 }
 
 .hero {
@@ -93,7 +83,7 @@ nav a:hover {
   border: 4px solid #0a3d62;
 }
 
-/* Social Icons */
+/* Socials */
 .socials {
   margin-top: 30px;
   display: flex;
@@ -111,28 +101,22 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   body {
     flex-direction: column;
   }
 
   nav {
-    position: relative;
     width: 100%;
-    min-height: auto;
+    height: auto;
     flex-direction: row;
     justify-content: space-around;
-    padding: 20px 10px;
-  }
-
-  nav a {
-    font-size: 14px;
-    padding: 8px;
+    position: relative;
   }
 
   .main-content {
-    margin-right: 0;
+    margin-left: 0;
     padding: 40px 20px;
   }
 
@@ -142,5 +126,10 @@ nav a:hover {
 
   .hero img {
     width: 140px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 10px;
   }
 }
