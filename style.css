@@ -16,10 +16,15 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 220px;
+  width: 150px;
   background-color: #0a3d62;
   padding: 40px 20px;
   color: white;
+  left: 0;
+}
+
+.sidebar-toggle {
+  display: none; /* Hide toggle button on larger screens */
 }
 
 .sidebar ul {
@@ -201,14 +206,45 @@ margin-top: 10px;
   }
 
   .sidebar {
-    width: 100%; /* Make sidebar full-width */
-    padding: 20px; /* Adjust padding for smaller screens */
-    text-align: center; /* Center sidebar content */
-    position: relative; /* Change to relative for mobile */
-    height: auto; /* Adjust height for content */
+    width: 220px;
+    background-color: #0a3d62;
+    padding: 40px 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: -220px; /* Hide sidebar by default */
+    height: 100vh;
+    transition: left 0.3s ease; /* Smooth transition */
+  }
+
+  .sidebar.open {
+    left: 0; /* Show sidebar when open */
+  }
+
+  .sidebar-toggle {
+    display: block; /* Make the toggle button visible on smaller screens */
+    font-weight: bold;
+    font-size: 28px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    color: #0a3d62;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 1000; /* Ensure button is above other elements */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+
+  .sidebar.open + .sidebar-toggle {
+    color: white; /* Change toggle color to white when sidebar is open */
   }
 
   .sidebar ul {
+    margin-top: 60px; /* Add vertical offset to move the list down */
+    list-style: none;
     padding: 0;
   }
 
@@ -246,4 +282,6 @@ margin-top: 10px;
     text-align: center; /* Center the text */
     margin-top: 20px; /* Add spacing from the content above */
     font-size: 12px; /* Adjust font size for smaller screens */
+}
+
 }
