@@ -209,6 +209,14 @@ margin-top: 10px;
   display: none; /* Hide top bar by default */
 }
 
+.project-box {
+  background-color: rgba(230, 230, 230, 0.4);
+  border-radius: 10px; /* Rounded edges */
+  padding: 20px; /* Add padding inside the box */
+  margin-bottom: 30px; /* Add spacing between boxes */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
 
