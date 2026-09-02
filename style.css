@@ -345,3 +345,30 @@ margin-top: 10px;
   }
 }
 
+/* Project images: side-by-side layout */
+.project-images {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.project-image {
+  flex: 1 1 48%;
+  min-width: 200px;
+  max-width: 500px;
+}
+
+.project-image .project-pic {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .project-image { flex: 1 1 100%; }
+}
+
