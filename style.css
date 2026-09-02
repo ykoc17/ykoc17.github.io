@@ -372,3 +372,56 @@ margin-top: 10px;
   .project-image { flex: 1 1 100%; }
 }
 
+/* BA-specific layout: top row (two images same height) and bottom centered image */
+.ba-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ba-top {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.ba-top .project-image {
+  flex: 0 0 auto;
+  height: 360px; /* same height for both top images */
+  max-width: 360px;
+}
+
+.ba-top .project-image .project-pic {
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.ba-bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.ba-bottom .project-image {
+  flex: 0 0 60%;
+  max-width: 700px;
+}
+
+.ba-bottom .project-image .project-pic {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive: stack BA top images on small screens */
+@media (max-width: 700px) {
+  .ba-top { flex-direction: column; }
+  .ba-top .project-image { height: auto; flex: 1 1 100%; max-width: 100%; }
+  .ba-bottom .project-image { flex: 1 1 100%; max-width: 100%; }
+}
+
