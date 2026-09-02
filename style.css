@@ -356,9 +356,9 @@ margin-top: 10px;
 }
 
 .project-image {
-  flex: 1 1 48%;
-  min-width: 200px;
-  max-width: 500px;
+  flex: 1 1 30%;
+  min-width: 160px;
+  max-width: 350px;
 }
 
 .project-image .project-pic {
