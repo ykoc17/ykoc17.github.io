@@ -372,56 +372,46 @@ margin-top: 10px;
   .project-image { flex: 1 1 100%; }
 }
 
-/* BA-specific layout: top row (two images same height) and bottom centered image */
-.ba-images {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.ba-top {
+/* BA split layout: left tall image and right stacked images whose heights sum to the left */
+.ba-split {
   display: flex;
   gap: 1rem;
-  justify-content: center;
   align-items: stretch;
-  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 10px;
+  height: 720px; /* total height for split layout; adjust as needed */
 }
 
-.ba-top .project-image {
-  flex: 0 0 auto;
-  height: 360px; /* same height for both top images */
-  max-width: 360px;
+.ba-left {
+  flex: 0 0 45%;
+  max-width: 45%;
 }
-
-.ba-top .project-image .project-pic {
+.ba-left .project-image { height: 100%; }
+.ba-left .project-pic {
   height: 100%;
   width: auto;
   display: block;
   object-fit: cover;
 }
 
-.ba-bottom {
+.ba-right {
+  flex: 0 0 45%;
+  max-width: 45%;
   display: flex;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
 }
-
-.ba-bottom .project-image {
-  flex: 0 0 60%;
-  max-width: 700px;
-}
-
-.ba-bottom .project-image .project-pic {
+.ba-right .project-image { flex: 1; }
+.ba-right .project-image .project-pic {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
 }
 
-/* Responsive: stack BA top images on small screens */
-@media (max-width: 700px) {
-  .ba-top { flex-direction: column; }
-  .ba-top .project-image { height: auto; flex: 1 1 100%; max-width: 100%; }
-  .ba-bottom .project-image { flex: 1 1 100%; max-width: 100%; }
+@media (max-width: 900px) {
+  .ba-split { flex-direction: column; height: auto; }
+  .ba-left, .ba-right { max-width: 100%; flex: 1 1 100%; }
+  .ba-left .project-image, .ba-right .project-image { height: auto; }
 }
 
