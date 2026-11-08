@@ -86,6 +86,10 @@ body {
   color: #e0e0e0;
 }
 
+.work-intro {
+  text-align: left;
+}
+
 /* Different page styles */
 .welcome {
   flex: 1;
@@ -250,10 +254,6 @@ margin-top: 10px;
   color: #e0e0e0;
   text-align: left;
   line-height: 1.6;
-}
-
-.project-description-intro {
-  text-align: right;
 }
 
 .top-bar {
