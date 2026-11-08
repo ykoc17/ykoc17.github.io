@@ -412,7 +412,13 @@ margin-top: 10px;
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
     flex-direction: column; /* Stack content vertically */
-    padding: 20px; /* Add padding for better spacing */
+    padding: 16px;
+  }
+
+  .welcome,
+  .about,
+  .work {
+    padding: 16px;
   }
 
   body {
@@ -430,6 +436,8 @@ margin-top: 10px;
     top: 0;
     left: -220px; /* Hide sidebar by default */
     height: 100vh;
+    height: 100dvh;
+    z-index: 999;
     transition: left 0.3s ease; /* Smooth transition */
   }
 
@@ -473,7 +481,8 @@ margin-top: 10px;
   }
 
   .text {
-    max-width: 90%; /* Reduce text width */
+    width: 100%;
+    max-width: none;
     margin: 0 auto; /* Center content */
     text-align: center; /* Center-align text */
   }
@@ -505,13 +514,13 @@ margin-top: 10px;
   }
 
   .socials {
-    gap: 15px; /* Reduce spacing between icons */
+    gap: 12px;
     justify-content: center; /* Center icons */
   }
 
   .socials img {
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
   }
 
   .cv-button {
@@ -520,10 +529,12 @@ margin-top: 10px;
   }
 
   .sidebar-bottom-text {
-    position: static; /* Remove absolute positioning */
-    text-align: center; /* Center the text */
-    margin-top: 20px; /* Add spacing from the content above */
-    font-size: 12px; /* Adjust font size for smaller screens */
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+    margin-top: 0;
+    font-size: 12px;
   }
   .text h1 {
     font-size: 30px; /* Adjust font size for smaller screens */
