@@ -79,6 +79,34 @@ body {
   font-weight: bold;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.typing-text.is-typing::after {
+  content: "";
+  display: inline-block;
+  height: 0.9em;
+  margin-left: 0.08em;
+  border-right: 2px solid currentColor;
+  vertical-align: -0.08em;
+  animation: typing-caret 0.8s steps(1, end) infinite;
+}
+
+@keyframes typing-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
 .text p {
   font-size: 15px;
   font-weight:500;

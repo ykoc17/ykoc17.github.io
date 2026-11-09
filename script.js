@@ -23,3 +23,30 @@ document.addEventListener('click', function (event) {
       }
     });
   }
+
+const typingText = document.querySelector('.typing-text');
+
+if (typingText) {
+  const text = typingText.textContent;
+  const characters = Array.from(text);
+  let visibleCharacters = 0;
+
+  typingText.textContent = '';
+  typingText.classList.add('is-typing');
+
+  function typeNextCharacter() {
+    typingText.textContent += characters[visibleCharacters];
+    const currentCharacter = characters[visibleCharacters];
+    visibleCharacters += 1;
+
+    if (visibleCharacters === characters.length) {
+      typingText.classList.remove('is-typing');
+      return;
+    }
+
+    const pause = currentCharacter === ',' || characters[visibleCharacters] === '👋' ? 350 : 100;
+    window.setTimeout(typeNextCharacter, pause);
+  }
+
+  window.setTimeout(typeNextCharacter, 100);
+}
